@@ -35,7 +35,6 @@ Sys.setenv(TZ = "GMT")
 Sys.setenv(ORA_SDTZ = "GMT")
 
 rs3 <- dbSendQuery(con, "insert into GA.DATUM(idopont) values (:1)", data = worksheet_firsthalf$idopont)
-execute(rs3, data = worksheet_firsthalf$idopont)
 dbCommit(con)
 
 dbDisconnect(con)
